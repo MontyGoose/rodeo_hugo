@@ -1,0 +1,60 @@
+/* Post header adjustments */
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  padding: 48px 0 36px;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 80px 0 56px;
+  }
+}
+
+/* Title box overlay: darker for contrast, smaller padding */
+.intro-header .post-heading .post-head-box {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 16px;
+  border-radius: 6px;
+}
+
+/* Ensure text reads well on dark overlay */
+.intro-header .post-heading .post-head-box h1,
+.intro-header .post-heading .post-head-box .subheading,
+.intro-header .post-heading .post-head-box .meta,
+.intro-header .post-heading .post-head-box .meta a,
+.intro-header .post-heading .post-head-box .tags a,
+.intro-header .post-heading .post-head-box .tags .tag {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Title and subtitle sizing */
+.intro-header .post-heading h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading h1 {
+    font-size: 42px;
+  }
+}
+.intro-header .post-heading .subheading {
+  font-size: 18px;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading .subheading {
+    font-size: 22px;
+  }
+}
+
+/* Slightly dim the background image for readability without altering assets */
+.intro-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+/* Ensure header has positioning context */
+.intro-header { position: relative; }
