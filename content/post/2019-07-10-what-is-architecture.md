@@ -11,7 +11,7 @@ excerpt: >-
 date: 2019-07-10T15:03:41.215Z
 author:     "Andy"
 image: "/img/backgrounds/building-blue.jpg"
-date: 2019-07-10T15:03:41.215Z
+published: 2019-07-10T15:03:41.215Z
 tags:
     - Architecture
 URL: "/technology/2019/07/10/what-is-architecture/"
