@@ -65,10 +65,9 @@ This site is configured for deployment on [Railway](https://railway.com/). To de
 3. Connect your repository
 4. Railway will automatically detect the Hugo configuration and deploy the site
 
-The site uses a `railway.toml` configuration file that:
-- Uses Nixpacks to automatically install Hugo
-- Builds the site with dynamic baseURL for Railway's environment
-- Serves the static files with Caddy
+The site uses a multi-stage `Dockerfile` that:
+- Builds the site with a pinned official Hugo image
+- Serves the generated static files with Caddy on Railway's assigned port
 - Includes health checks and restart policies
 
 ## 📝 License

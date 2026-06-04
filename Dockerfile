@@ -1,23 +1,12 @@
-# Multi-stage build for Hugo site with Caddy
+# Build the static site with the official, pinned Hugo image.
+FROM ghcr.io/gohugoio/hugo:v0.152.1 AS builder
 
-# Stage 1: Build the Hugo site
-FROM hugomods/hugo:ext-0.152.1 AS builder
-
-# Set working directory
 WORKDIR /site
-
-# Copy the entire site content
 COPY . .
+RUN hugo --gc --minify
 
-# Build the Hugo site
-# Use the RAILWAY_PUBLIC_DOMAIN environment variable if available, otherwise use a default
-RUN hugo --baseURL=${RAILWAY_PUBLIC_DOMAIN:-https://localhost}
+# Serve the generated files from a small, stable Caddy image.
+FROM caddy:2-alpine
 
-# Stage 2: Serve with Caddy
-FROM caddy:latest
-
-# Copy the built site from the builder stage to Caddy's static files directory
 COPY --from=builder /site/public /srv
-
-# Caddy will automatically serve the /srv directory
-# The Caddyfile can be customized if needed
+COPY Caddyfile /etc/caddy/Caddyfile
