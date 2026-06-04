@@ -58,11 +58,18 @@ rodeo_hugo/
 
 ## 🚀 Deployment
 
-This site can be deployed to any static hosting service. Some popular options:
+This site is configured for deployment on [Railway](https://railway.com/). To deploy:
 
-- [Netlify](https://www.netlify.com/)
-- [Vercel](https://vercel.com/)
-- [GitHub Pages](https://pages.github.com/)
+1. Push your code to a Git repository (GitHub, GitLab, etc.)
+2. Create a new project on Railway
+3. Connect your repository
+4. Railway will automatically detect the Hugo configuration and deploy the site
+
+The site uses a `railway.toml` configuration file that:
+- Uses Nixpacks to automatically install Hugo
+- Builds the site with dynamic baseURL for Railway's environment
+- Serves the static files with Caddy
+- Includes health checks and restart policies
 
 ## 📝 License
 
