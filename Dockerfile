@@ -3,7 +3,7 @@ FROM ghcr.io/gohugoio/hugo:v0.152.1 AS builder
 
 WORKDIR /site
 COPY . .
-RUN hugo --gc --minify
+RUN hugo --gc --minify --noBuildLock
 
 # Serve the generated files from a small, stable Caddy image.
 FROM caddy:2-alpine
