@@ -15,7 +15,8 @@ paperSize = 5
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
-  header_image = "img/backgrounds/code_bike.webp"
+  header_image = "img/backgrounds/background.jpg"
+  logo = "img/logo.jpg"
   SEOTitle = "RodeoCat Blog"
   description = "This is the personal webspace of Andy Parry"
   keyword = "RodeoCat, Andy Parry, cyclist, technology, engineering, software"

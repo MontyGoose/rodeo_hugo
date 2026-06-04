@@ -1,0 +1,41 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Hugo build output
+public
+resources
+
+# Node modules
+node_modules
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Documentation files
+README.md
+BRANDING_UPDATES.md
+
+# Docker files
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Railway files
+railway.toml
+
+# Netlify files (removed but just in case)
+netlify.toml
+
+# Temporary files
+*.tmp
+*.log

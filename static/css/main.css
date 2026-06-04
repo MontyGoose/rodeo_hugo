@@ -1,3 +1,12 @@
+/* ========================================
+   RodeoCat Brand Colors
+   ======================================== */
+:root {
+  --brand-blue: #215179;
+  --brand-teal: #18A59F;
+  --brand-dark: #3d4449;
+}
+
 /* Post header adjustments */
 .intro-header .site-heading,
 .intro-header .post-heading,
@@ -58,3 +67,135 @@
 }
 /* Ensure header has positioning context */
 .intro-header { position: relative; }
+
+/* ========================================
+   Brand Color Applications
+   ======================================== */
+
+/* Primary links and accents */
+a {
+  color: var(--brand-blue);
+}
+
+a:hover,
+a:focus {
+  color: var(--brand-teal);
+}
+
+/* Navigation bar */
+.navbar-custom {
+  background-color: var(--brand-blue);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav li a {
+  color: #fff;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+  color: var(--brand-teal);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--brand-blue);
+  border-color: var(--brand-blue);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--brand-teal);
+  border-color: var(--brand-teal);
+}
+
+/* Tags */
+.tags a,
+.tag {
+  background-color: var(--brand-blue);
+  border-color: var(--brand-blue);
+}
+
+.tags a:hover {
+  background-color: var(--brand-teal);
+  border-color: var(--brand-teal);
+}
+
+/* Sidebar */
+.sidebar-container h5 {
+  color: var(--brand-blue);
+}
+
+.sidebar-container .tags a {
+  color: #fff;
+  background-color: var(--brand-blue);
+}
+
+.sidebar-container .tags a:hover {
+  background-color: var(--brand-teal);
+}
+
+/* Post meta and categories */
+.post-preview a {
+  color: var(--brand-dark);
+}
+
+.post-preview a:hover,
+.post-preview a:focus {
+  color: var(--brand-blue);
+}
+
+.post-meta a {
+  color: var(--brand-blue);
+}
+
+.post-meta a:hover {
+  color: var(--brand-teal);
+}
+
+/* Archive page */
+.archive-item .archive-item-link {
+  color: var(--brand-blue);
+}
+
+.archive-item .archive-item-link:hover {
+  color: var(--brand-teal);
+}
+
+/* Logo styling */
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Sidebar avatar border */
+.sidebar-container .sidebar-avatar img {
+  border: 3px solid var(--brand-teal);
+}
+
+/* Featured tags */
+.featured-tags a {
+  border: 1px solid var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+.featured-tags a:hover {
+  border-color: var(--brand-teal);
+  background-color: var(--brand-teal);
+  color: #fff;
+}
+
+/* Pagination */
+.pagination > .active > a,
+.pagination > .active > span {
+  background-color: var(--brand-blue);
+  border-color: var(--brand-blue);
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+  background-color: var(--brand-teal);
+  border-color: var(--brand-teal);
+  color: #fff;
+}
